@@ -17,8 +17,9 @@ why-forked: >-
   and WebCrypto's async digest cannot be used. The maintained alternatives do
   not fit: @noble/hashes 2.x is ESM-only and this tree is CommonJS, and sha.js
   drags in to-buffer's typed-array helpers. Adopted so the sole abandoned node
-  in that chain is one we own - its own dependencies (inherits,
-  minimalistic-assert) are frozen, dependency-free leaves.
+  in that chain is one we own, with its two leaves (minimalistic-assert at ten
+  lines, inherits at fifteen) vendored rather than depended on - so the package
+  declares no runtime dependencies at all.
 
 status: active
 

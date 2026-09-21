@@ -24,10 +24,6 @@
     "url": "https://github.com/unabandoned/hash.js/issues"
   },
   "homepage": "https://github.com/unabandoned/hash.js#readme",
-  "dependencies": {
-    "inherits": "^2.0.3",
-    "minimalistic-assert": "^1.0.1"
-  },
   "devDependencies": {
     "@commitlint/cli": "21.2.2",
     "@commitlint/config-conventional": "21.2.2"

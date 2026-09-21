@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/unabandoned/hash.js/compare/hash.js-v1.3.0...hash.js-v1.3.1) (2026-09-21)
+
+
+### Dependencies & maintenance
+
+* add the renovate-config validation workflow ([#5](https://github.com/unabandoned/hash.js/issues/5)) ([4c4b2ca](https://github.com/unabandoned/hash.js/commit/4c4b2caf78f07e3a5236b0765e0bab23d915aec8))
+
 ## [1.3.0](https://github.com/unabandoned/hash.js/compare/hash.js-v1.2.0...hash.js-v1.3.0) (2026-09-21)
 
 

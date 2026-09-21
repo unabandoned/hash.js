@@ -7,9 +7,9 @@ upstream:
   reason: "no release since 2018-11-30; issues unanswered"
 
 summary: >-
-  Pure-JavaScript hash functions (SHA-1/2/3 families, RIPEMD-160 and HMAC) that
-  run identically in Node and the browser, with no reliance on WebCrypto or
-  node:crypto.
+  Pure-JavaScript hash functions - MD5, SHA-1, the SHA-2 family, RIPEMD-160 and
+  HMAC over any of them - that run identically in Node and the browser, with no
+  reliance on WebCrypto or node:crypto and no dependencies of its own.
 
 why-forked: >-
   @unabandoned/json-to-ts uses its SHA-1 to content-address type descriptions,

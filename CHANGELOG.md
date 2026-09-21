@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/unabandoned/hash.js/compare/hash.js-v1.3.1...hash.js-v1.4.0) (2026-09-21)
+
+
+### Features
+
+* add sha512-256 ([3ba22f8](https://github.com/unabandoned/hash.js/commit/3ba22f8c0864612efc879a19dc00dbeae40d3f56))
+
 ## [1.3.1](https://github.com/unabandoned/hash.js/compare/hash.js-v1.3.0...hash.js-v1.3.1) (2026-09-21)
 
 

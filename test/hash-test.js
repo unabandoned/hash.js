@@ -1,7 +1,6 @@
 'use strict';
-/* global describe it */
-
-var assert = require('assert');
+var assert = require('node:assert');
+var { describe, it } = require('node:test');
 var crypto = require('crypto');
 var hash = require('../');
 

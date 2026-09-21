@@ -1,17 +1,22 @@
-# hash.js [![Build Status](https://secure.travis-ci.org/indutny/hash.js.svg)](http://travis-ci.org/indutny/hash.js)
+# @unabandoned/hash.js
 
 Just a bike-shed.
+
+> A maintained fork of [indutny/hash.js](https://github.com/indutny/hash.js),
+> which has had no release since November 2018. Published as
+> [`@unabandoned/hash.js`](https://www.npmjs.com/package/@unabandoned/hash.js);
+> the API is unchanged from upstream.
 
 ## Install
 
 ```sh
-npm install hash.js
+npm install @unabandoned/hash.js
 ```
 
 ## Usage
 
 ```js
-var hash = require('hash.js')
+var hash = require('@unabandoned/hash.js')
 hash.sha256().update('abc').digest('hex')
 ```
 

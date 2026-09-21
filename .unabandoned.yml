@@ -1,0 +1,29 @@
+schema: 1
+
+package: "@unabandoned/hash.js"
+
+upstream:
+  repo: indutny/hash.js
+  reason: "no release since 2018-11-30; issues unanswered"
+
+summary: >-
+  Pure-JavaScript hash functions (SHA-1/2/3 families, RIPEMD-160 and HMAC) that
+  run identically in Node and the browser, with no reliance on WebCrypto or
+  node:crypto.
+
+why-forked: >-
+  @unabandoned/json-to-ts uses its SHA-1 to content-address type descriptions,
+  and IT-Tools ships that in a browser bundle where node:crypto is stubbed out
+  and WebCrypto's async digest cannot be used. The maintained alternatives do
+  not fit: @noble/hashes 2.x is ESM-only and this tree is CommonJS, and sha.js
+  drags in to-buffer's typed-array helpers. Adopted so the sole abandoned node
+  in that chain is one we own - its own dependencies (inherits,
+  minimalistic-assert) are frozen, dependency-free leaves.
+
+status: active
+
+used-by:
+  - consumer: unabandoned/json-to-ts
+    purpose: "SHA-1 content addressing for deduplicating generated type descriptions."
+
+tags: [hash, sha, hmac, crypto, browser]

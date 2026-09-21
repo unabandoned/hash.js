@@ -152,4 +152,16 @@ describe('Hash', function() {
       [ 'a'.repeat(64), '014842d480b571495a4a0363793f7367' ]
     ]);
   });
+
+  it('should support sha512-256', function() {
+    // FIPS 180-4 examples, plus the 127/128-byte block-boundary cases.
+    test(hash.sha512_256, [
+      [ '', 'c672b8d1ef56ed28ab87c3622c5114069bdd3ad7b8f9737498d0c01ecef0967a' ],
+      [ 'abc', '53048e2681941ef99b2e29b76b4c7dabe4c2d0c634fc6d46e0e2f13107e7af23' ],
+      [ 'abcdefghbcdefghicdefghijdefghijkefghijklfghijklmghijklmnhijklmnoijklmnopjklmnopqklmnopqrlmnopqrsmnopqrstnopqrstu',
+        '3928e184fb8690f840da3988121d31be65cb9d3ef83ee6146feac861e19b563a' ],
+      [ 'a'.repeat(127), '2fe3b2a6ee7e12f6fe4ba82166541ad9b4ed882c493581cbe300d68f3757b778' ],
+      [ 'a'.repeat(128), 'b88f97e274f9c1d49f181c8cbd01a9c74930ad055a46ac4499a1d601f1c80bf2' ]
+    ]);
+  });
 });

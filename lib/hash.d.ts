@@ -1,8 +1,10 @@
-declare var hash: Hash;
+// This file is the package's `types` entry, so it has to be a module. It used
+// to declare an ambient `module "hash.js"` instead, which stopped resolving the
+// moment the package was renamed: TypeScript then saw a file with no exports
+// and reported "is not a module" to anyone importing @unabandoned/hash.js.
+declare const hash: Hash;
 
-declare module "hash.js" {
-    export = hash;
-}
+export = hash;
 
 interface BlockHash<T> {
     hmacStrength: number
@@ -20,6 +22,7 @@ interface MessageDigest<T> {
 
 interface Hash {
     hmac: HmacConstructor
+    md5: Md5Constructor
     ripemd: RipemdSet
     ripemd160: Ripemd160Constructor
     sha: ShaSet
@@ -28,6 +31,7 @@ interface Hash {
     sha256: Sha256Constructor
     sha384: Sha384Constructor
     sha512: Sha512Constructor
+    sha512_256: Sha512_256Constructor
     utils: Utils
 }
 
@@ -46,6 +50,7 @@ interface ShaSet {
     sha256: Sha256Constructor
     sha384: Sha384Constructor
     sha512: Sha512Constructor
+    sha512_256: Sha512_256Constructor
 }
 
 interface HmacConstructor { (hash: BlockHash<any>, key: any, enc?: 'hex'): Hmac }
@@ -55,6 +60,8 @@ interface Sha224Constructor { (): Sha224; }
 interface Sha256Constructor { (): Sha256; }
 interface Sha384Constructor { (): Sha384; }
 interface Sha512Constructor { (): Sha512; }
+interface Sha512_256Constructor { (): Sha512_256; }
+interface Md5Constructor { (): Md5; }
 
 interface Hmac extends MessageDigest<Hmac> {
     blockSize: 512
@@ -103,4 +110,20 @@ interface Sha512 extends BlockHash<Sha512>, MessageDigest<Sha512> {
     outSize: 512
     padLength: 128
     endian: 'big'
+}
+
+interface Sha512_256 extends BlockHash<Sha512_256>, MessageDigest<Sha512_256> {
+    blockSize: 1024
+    hmacStrength: 192
+    outSize: 256
+    padLength: 128
+    endian: 'big'
+}
+
+interface Md5 extends BlockHash<Md5>, MessageDigest<Md5> {
+    blockSize: 512
+    hmacStrength: 192
+    outSize: 128
+    padLength: 64
+    endian: 'little'
 }

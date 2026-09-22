@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/unabandoned/hash.js/compare/hash.js-v1.4.0...hash.js-v1.4.1) (2026-09-22)
+
+
+### Bug Fixes
+
+* **types:** make the declarations usable under the scoped name ([#11](https://github.com/unabandoned/hash.js/issues/11)) ([711a1f3](https://github.com/unabandoned/hash.js/commit/711a1f3c335f13ad4f1259be82e14e99003a252b))
+
 ## [1.4.0](https://github.com/unabandoned/hash.js/compare/hash.js-v1.3.1...hash.js-v1.4.0) (2026-09-21)
 
 

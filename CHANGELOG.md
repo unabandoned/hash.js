@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.2](https://github.com/unabandoned/hash.js/compare/hash.js-v1.4.1...hash.js-v1.4.2) (2026-09-23)
+
+
+### Bug Fixes
+
+* stop dev-only commits from cutting releases ([#13](https://github.com/unabandoned/hash.js/issues/13)) ([1e64387](https://github.com/unabandoned/hash.js/commit/1e64387d6dbad280f7175ceac965e3f9579176fe))
+
 ## [1.4.1](https://github.com/unabandoned/hash.js/compare/hash.js-v1.4.0...hash.js-v1.4.1) (2026-09-22)
 
 

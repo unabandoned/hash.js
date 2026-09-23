@@ -1,6 +1,10 @@
 {
   "name": "@unabandoned/hash.js",
   "version": "1.4.2",
+  "files": [
+    "CHANGELOG.md",
+    "lib"
+  ],
   "description": "Various hash functions that could be run by both browser and node",
   "main": "lib/hash.js",
   "typings": "lib/hash.d.ts",
